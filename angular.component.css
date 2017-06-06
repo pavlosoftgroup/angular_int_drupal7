@@ -1,0 +1,44 @@
+.user-panel {
+    background: #204D74;
+    border: #fff 1px solid;
+    border-radius: 15px;
+    color: azure;
+    padding-left: 10px;
+}
+.button-my{
+    border-radius: 5px;
+    padding: 5px 5px 0;
+    /*width: 30px;*/
+    height: 30px;
+    float: right;
+    margin: 0px 20px 0 0;
+    cursor: pointer;
+    position: relative;
+    top:-40px;
+
+}
+.right-block{
+    float: right;
+    width: 20%;
+}
+.delete{
+    background: red;
+    color: white;
+}
+.delete:hover{
+    background: white;
+    color: red;
+}
+.rename{
+    background: orange ;
+    color: white;
+}
+
+.rename:hover {
+    background: white;
+    color: orange;
+}
+.glyphicon *{
+    width: 80%;
+    display: inline-block;
+}

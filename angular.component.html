@@ -1,0 +1,34 @@
+<div class="user-panel form-input">
+  <!--<button (click)="rename()"></button>-->
+  <input type="text" #inperutForm>
+
+
+</div>
+
+<div *ngFor="let user of users">
+  <form class="user-panel" *ngIf="user.name != ''" #formUser{{+user.uid}} >
+    <span class="glyphicon glyphicon-user" aria-hidden="true">
+      <h2>
+        Name:
+        <span *ngIf="user.renameVal">
+          {{user.name}}
+        </span>
+                  <!--<input name="userName" type="text" *ngIf="!user.renameVal" [(ngModel)]="user.name"  #userName="ngModel" >-->
+                  <input type="text"  *ngIf="!user.renameVal"  #inputForm>
+      </h2>
+      <h4><b>E-Mail: {{user.mail}}</b></h4>
+    </span>
+    <span class="right-block"></span>
+    <span *ngIf="user.renameVal"  class="rename button-my button"
+          (click)="setRename(user)">Rename</span>
+    <button type="button" *ngIf="!user.renameVal"  class="rename button-my button"
+          (click)="getRename(user, inputForm)">Rename</button>
+    <span  *ngIf="user.renameVal" class="delete button-my button"
+           (click)="setDelete(user)">Delete</span>
+
+    <span  *ngIf="!user.renameVal" class="delete button-my button"
+           (click)="setRename(user)">Cancel</span>
+
+  </form>
+
+</div>
